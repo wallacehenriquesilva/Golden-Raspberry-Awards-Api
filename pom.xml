@@ -82,6 +82,7 @@
         </dependency>
 
 
+
     </dependencies>
 
     <build>
@@ -90,22 +91,26 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
+            <!-- Plugin para copiar o jar gerado para a pasta do docker -->
             <plugin>
-                <groupId>com.spotify</groupId>
-                <artifactId>dockerfile-maven-plugin</artifactId>
-                <version>1.4.3</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.8</version>
                 <executions>
                     <execution>
-                        <id>default</id>
+                        <phase>install</phase>
+                        <configuration>
+                            <target>
+                                <copy file="target/${project.artifactId}-${project.version}.jar"
+                                      tofile="Docker/jar/${project.artifactId}.jar"/>
+                            </target>
+                        </configuration>
                         <goals>
-                            <goal>build</goal>
+                            <goal>run</goal>
                         </goals>
                     </execution>
                 </executions>
-                <configuration>
-                    <repository>docker.io/wallacehenriquee/golden-raspberry-awards-api</repository>
-                    <tag>${project.version}</tag>
-                </configuration>
             </plugin>
         </plugins>
     </build>
