@@ -1,6 +1,6 @@
 package br.com.wallace.worstmovie.data.entities;
 
-import br.com.wallace.javapow.annotations.CsvColumn;
+import com.wallace.javapow.annotations.CsvColumn;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 

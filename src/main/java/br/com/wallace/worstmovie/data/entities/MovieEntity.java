@@ -1,11 +1,11 @@
 package br.com.wallace.worstmovie.data.entities;
 
 
-import br.com.wallace.javapow.annotations.Csv;
-import br.com.wallace.javapow.annotations.CsvBooleanColumn;
-import br.com.wallace.javapow.annotations.CsvCollectionColumn;
-import br.com.wallace.javapow.annotations.CsvColumn;
-import br.com.wallace.javapow.enums.ColumnTypeEnum;
+import com.wallace.javapow.annotations.Csv;
+import com.wallace.javapow.annotations.CsvBooleanColumn;
+import com.wallace.javapow.annotations.CsvCollectionColumn;
+import com.wallace.javapow.annotations.CsvColumn;
+import com.wallace.javapow.enums.ColumnTypeEnum;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 

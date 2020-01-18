@@ -1,6 +1,5 @@
 package br.com.wallace.worstmovie.services;
 
-import br.com.wallace.javapow.readers.CsvReader;
 import br.com.wallace.worstmovie.data.entities.MovieEntity;
 import br.com.wallace.worstmovie.data.entities.ProducerEntity;
 import br.com.wallace.worstmovie.data.entities.StudioEntity;
@@ -10,6 +9,7 @@ import br.com.wallace.worstmovie.data.repositories.MovieRepository;
 import br.com.wallace.worstmovie.data.repositories.ProducerRepository;
 import br.com.wallace.worstmovie.data.repositories.StudioRepository;
 import br.com.wallace.worstmovie.exceptions.NoProducersIntervalException;
+import com.wallace.javapow.readers.CsvReader;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 

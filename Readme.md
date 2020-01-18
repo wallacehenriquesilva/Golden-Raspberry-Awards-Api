@@ -11,8 +11,11 @@ Como a idéia é termos um banco de dados em memória, criado e manipulado apena
 dados H2 foi escolhido.
 
 # Docker
-Todos os micro serviços geram automaticamente ao serem compilados imagens docker, e estão hospedados no docker hub, bem 
-como o front end e podem ser baixados pelos comandos abaixo.
+O serviço encontra-se também disponível no docker hub, pode ser acessado clicando [Aqui](https://hub.docker.com/repository/docker/wallacehenriquee/golden-raspberry-awards-api),
+e também, pode ser executado com o seguinte comando.
+
+    docker run --network=host 
+    -itd wallacehenriquee/golden-raspberry-awards-api:latest
 
 # Dependências do projeto
 - SpringBoot 2.1.6.RELEASE
